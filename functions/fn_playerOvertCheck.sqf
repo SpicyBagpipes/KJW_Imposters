@@ -29,7 +29,7 @@ Author:
 
 _playerCurrentWeapon = currentWeapon player;
 _playerPrimaryWeapon = primaryWeapon player;
-_playerSecondaryPrimaryWeapon = player getVariable ["KJW_ShotgunClassname",""];
+_playerSecondaryPrimaryWeapon = player getVariable ["KJW_TwoPrimaryWeapons_SecondSecondaryInfo",""];
 _playerLauncher = secondaryWeapon player;
 _playerHelmet = headgear player;
 _playerVest = vest player;
@@ -48,7 +48,7 @@ if ((_playerCurrentWeapon != "") && {!([_playerCurrentWeapon,"CfgWeapons"] call 
 
 if ((_playerPrimaryWeapon != "") && {!([_playerPrimaryWeapon,"CfgWeapons"] call KJW_Imposters_fnc_itemException)}) exitWith {true};
 
-if ((_playerSecondaryPrimaryWeapon != "") && {!([_playerSecondaryPrimaryWeapon,"CfgWeapons"] call KJW_Imposters_fnc_itemException)}) exitWith {true};
+if ((_playerSecondaryPrimaryWeapon != "") && {!([_playerSecondaryPrimaryWeapon#0,"CfgWeapons"] call KJW_Imposters_fnc_itemException)}) exitWith {true};
 
 if ((_playerLauncher != "") && {!([_playerLauncher,"CfgWeapons"] call KJW_Imposters_fnc_itemException)}) exitWith {true};
 
