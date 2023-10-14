@@ -43,7 +43,6 @@ _settingValue = KJW_Imposters_Setting_Exceptions;
 	["#hmd", hmd player],
 	["#goggles", goggles player],
 	["#primaryweapon", primaryWeapon player],
-	["#secondaryprimaryweapon", player getVariable ["KJW_ShotgunClassname",""]],
 	["#currentweapon", currentWeapon player],
 	["#launcher", secondaryWeapon player]
 ];
