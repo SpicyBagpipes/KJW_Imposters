@@ -47,3 +47,7 @@
 #define GET_TEXT(config,default) (if (isText (config)) then {getText (config)} else {default})
 
 #define PREP(FUNCTIONNAME) COMPONENT_GENERAL##_fnc_##FUNCTIONNAME = compile preProcessFileLineNumbers '\y\##MOD_NAME##\addons\##COMPONENT##\functions\fnc_##FUNCTIONNAME##.sqf';
+
+#define COMPAT(CLASSNAME,SCORE)class CLASSNAME {\
+				KJW_Imposters_SuspicionAmount = SCORE##;\
+			};

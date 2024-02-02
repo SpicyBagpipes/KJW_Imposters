@@ -17,3 +17,6 @@
  */
 
 PREP(addEventHandlers)
+PREP(addSettings)
+PREP(processUnit)
+PREP(updateUnit)

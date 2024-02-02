@@ -17,16 +17,14 @@ class CfgPatches {
 	};
 };
 
-class Extended_PostInit_EventHandlers {
-	class COMPONENT_POSTINIT {
-		init = QUOTE(call compileScript [QQPATHTOF(XEH_PostInit.sqf)]);
-	};
+class CfgVehicles {
+    // Backpacks, Vests
 };
 
-class Extended_PreInit_EventHandlers {
-	class COMPONENT_PREINIT {
-        init = QUOTE(call compileScript [QQPATHTOF(XEH_PreInit.sqf)]);
-	};
+class CfgWeapons {
+    // Uniform items, Guns, Helmets, NVGs
 };
 
-#include "RscTitles.hpp"
+class CfgGlasses {
+    // Facewear
+};
