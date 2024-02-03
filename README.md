@@ -1,15 +1,10 @@
-# KJW_Imposters
-A modification for Arma 3 that adds the ability to go undercover, with a variety of caveats and details.
+# KJW's Medical Expansion: Imposters
 
-Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2917554904
+Imposters is a part of [KJW's Medical Expansion](https://github.com/SpicyBagpipes/KJW_MedicalExpansion) set of mods which aim to expand on the existing ACE medical system for Arma 3 with interesting new threats.
 
-## Features
-- No keybinds. System runs automatically based on the circumstances around the player; there is no "go undercover" button.
-- Sus points
-  - Sus points are obtained by completing suspicious actions. These prevent you from being able to go undercover.
-- Disguises
-  - Configurable classnames are able to be used to create a disguise. Kill a police officer, take his uniform, wait a few seconds for your sus points to reach 0, and you're undercover again.
-- Wanted system
-  - Forget a balaclava or face covering whilst committing a crime and leave enemy witnesses? They'll add you to the wanted list, preventing you from going undercover.
-- Smart AI
-  - Enemy AI will be able to figure out where you are for a short amount of time based on your last known position and direction. Keep moving to stop them from showing up and killing you.
+Specifically, Imposters implements high-fidelity and high-versatility radiological threats, with an aim on providing the player with a wide range of radiological capabilities that they can add to their missions when they desire, with the exact level of difficulty that suits the players they are making the mission for. The highlights of this mod are:
+  - Highly configurable radiological threats, with the capability for players to add their own radiation types.
+  - Decontamination from radioactive dust.
+  - High-fidelity PPE with a wide range of options for difficulty.
+  - Accurate radiation poisoning symptoms and effects (as accurate as you can make it in Arma, anyway).
+  - Medications to treat radiation poisoning.
