@@ -97,12 +97,12 @@ class CfgWeapons {
     // Uniform items, Guns, Helmets, NVGs, Vests
 
     // Guns
-    COMPAT(hgun_PDW2000_F,0.2)
-    COMPAT(sgun_HunterShotgun_01_sawedoff_F,0.2)
-    COMPAT(sgun_HunterShotgun_01_F,0.5)
-    COMPAT(SMG_05_F,0.3)
-    COMPAT(SMG_03C_BASE,0.3)
-    COMPAT(SMG_01_F,0.8)
+    COMPAT(hgun_PDW2000_F,0.8)
+    COMPAT(sgun_HunterShotgun_01_sawedoff_F,0.8)
+    COMPAT(sgun_HunterShotgun_01_F,1.2)
+    COMPAT(SMG_05_F,0.8)
+    COMPAT(SMG_03C_BASE,0.8)
+    COMPAT(SMG_01_F,1)
 
     // Military Headwear
     COMPAT(H_HelmetHBK_base_F,2)
@@ -176,7 +176,8 @@ class CfgWeapons {
 
     // Military Vests
     COMPAT(V_Chestrig_khk,0.8)
-    COMPAT(V_TacChestrig_grn_F,0.7)
+    COMPAT(V_Chestrig_oli,0.8)
+    COMPAT(V_TacChestrig_grn_F,0.7)    
 
     // Civilian Vests
     COMPAT(V_Press_F,-0.8)
@@ -250,10 +251,10 @@ class CfgWeapons {
     COMPAT(U_C_IDAP_Man_shorts_F,0)
     COMPAT(U_C_Paramedic_01_F,-0.5)
     COMPAT(U_C_ArtTShirt_01_v1_F,0)
-    COMPAT(U_C_ArtTShirt_02_v1_F,0)
-    COMPAT(U_C_ArtTShirt_03_v1_F,0)
-    COMPAT(U_C_ArtTShirt_04_v1_F,0)
-    COMPAT(U_C_ArtTShirt_05_v1_F,0)
+    COMPAT(U_C_ArtTShirt_02_v2_F,0)
+    COMPAT(U_C_ArtTShirt_03_v3_F,0)
+    COMPAT(U_C_ArtTShirt_04_v4_F,0)
+    COMPAT(U_C_ArtTShirt_05_v5_F,0)
     COMPAT(U_C_ArtTShirt_01_v6_F,0)
     COMPAT(U_C_Poloshirt_stripped,0)
     COMPAT(U_C_Poloshirt_burgundy,0)
