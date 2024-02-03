@@ -60,7 +60,7 @@
 	"SLIDER",
 	["Overt Coefficient", "Coefficient applied to how overt the unit should be. Higher values mean more overt"],
 	"KJW's Imposters",
-	[0, 1, 0.05, 2], // Default value
+	[0, 2, 1, 2], // Default value
 	1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0)
 	{}, // Setting changed code
 	false // Requires restart
