@@ -26,9 +26,9 @@
 	}
 ] call CBA_fnc_addEventHandler;
 
-ace_player addEventHandler ["GetOutMan", {
+player addEventHandler ["GetOutMan", {
 	params ["_vehicle", "_role", "_unit", "_turret"];
-	if (primaryWeapon ace_player == "" && GVAR(gunAwayOnExit)) then {ace_player action ["SwitchWeapon", ace_player, ace_player, 299];};
+	if (primaryWeapon player == "" && GVAR(gunAwayOnExit)) then {player action ["SwitchWeapon", player, player, 299];};
 }];
 
 [
@@ -46,9 +46,9 @@ ace_player addEventHandler ["GetOutMan", {
 	"ACE_Medical_Treatment_medicationLocal",
 	{
 		params ["_pt", "_bodypart", "_classname"];
-		if ((ace_player != _pt) && {side _pt != side ace_player}) exitWith {
-			private _susPoints = ace_player getVariable [QGVAR(susPoints), 0];
-			ace_player setVariable [QGVAR(susPoints), _susPoints + (5*GVAR(susPointsCoefficient))];
+		if ((player != _pt) && {side _pt != side player}) exitWith {
+			private _susPoints = player getVariable [QGVAR(susPoints), 0];
+			player setVariable [QGVAR(susPoints), _susPoints + (5*GVAR(susPointsCoefficient))];
 			[QGVAR(susPointsAdded), [1*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 		};
 	}
@@ -58,9 +58,9 @@ ace_player addEventHandler ["GetOutMan", {
 	"ACE_Explosives_place",
 	{
 		params ["_explosive","_dir","_pitch","_unit"];
-		if (_unit != ace_player) exitWith {};
-		private _susPoints = ace_player getVariable [QGVAR(susPoints), 0];
-		ace_player setVariable [QGVAR(susPoints), _susPoints + (10*GVAR(susPointsCoefficient))];
+		if (_unit != player) exitWith {};
+		private _susPoints = player getVariable [QGVAR(susPoints), 0];
+		player setVariable [QGVAR(susPoints), _susPoints + (10*GVAR(susPointsCoefficient))];
 		[QGVAR(susPointsAdded), [5*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 	}
 ] call CBA_fnc_addEventHandler;
@@ -70,9 +70,16 @@ addMissionEventHandler ["EntityKilled", {
 	if (!(_killed isKindOf "CAManBase")) exitWith {};
 	if (isNull _instigator) then { _instigator = UAVControl vehicle _killer select 0 }; // UAV/UGV player operated road kill
 	if (isNull _instigator) then { _instigator = _killer }; // player driven vehicle road kill
-	if (_killer == ace_player) exitWith {
-		private _susPoints = ace_player getVariable [QGVAR(susPoints), 0];
-		ace_player setVariable [QGVAR(susPoints), _susPoints + (3*GVAR(susPointsCoefficient))];
+	if (_killer == player) exitWith {
+		private _susPoints = player getVariable [QGVAR(susPoints), 0];
+		player setVariable [QGVAR(susPoints), _susPoints + (3*GVAR(susPointsCoefficient))];
 		[QGVAR(susPointsAdded), [3*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 	};
 }];
+
+[
+	"loadout",
+	{
+		call FUNC(updateGui)
+	}
+] call CBA_fnc_addPlayerEventHandler;

@@ -16,7 +16,9 @@
  *  Public: Yes
  */
 
-params [["_unit", ace_player, [objNull]]];
+params [["_unit", player, [objNull]]];
+
+if (_unit getVariable [QGVAR(disabled), false]) then {[_unit, 69696969] call FUNC(updateUnit)};
 
 private _helmet = headgear _unit;
 private _facewear = goggles _unit;

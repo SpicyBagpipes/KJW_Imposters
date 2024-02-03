@@ -136,7 +136,7 @@ class CfgVehicles {
 class CfgWeapons {
     // Uniform items, Guns, Helmets, NVGs, Vests
 
-    // Class delcarations
+    // Class declarations
     class pdw2000_base_F;
     class sgun_HunterShotgun_01_sawedoff_base_F;
     class sgun_HunterShotgun_01_base_F;
@@ -357,6 +357,7 @@ class CfgGlasses {
     class None;
     class G_Balaclava_blk;
 
+    COMPAT(G_Combat,None,0)
     COMPAT(G_Aviator,None,0)
     COMPAT(G_Squares,None,0)
     COMPAT(G_Sport_Red,None,0)

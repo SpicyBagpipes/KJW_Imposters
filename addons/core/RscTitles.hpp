@@ -2,6 +2,13 @@ class RscBackGround;
 class RscProgress;
 class RscText;
 class RscTitles {
+	class Default 
+	{
+		idd = -1;
+		fadein = 0;
+		fadeout = 0;
+		duration = 0;
+	};
 	class KJW_Imposters_SusBar {
 		idd = 46920;
 		enableSimulation = 1;
@@ -17,6 +24,7 @@ class RscTitles {
 				y = "0.05 * safezoneH + safezoneY";
 				w = "0.4*safezoneW";
 				h = "0.015*safezoneH";
+				colorFrame[] = {0.4,0.4,0.4,1};
 			};
 			class Text: RscText {
 				idc = 4948;
