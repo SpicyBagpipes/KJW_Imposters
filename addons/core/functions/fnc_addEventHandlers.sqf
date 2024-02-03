@@ -38,6 +38,7 @@ ace_player addEventHandler ["GetOutMan", {
 		params ["_unit"];
 		private _susPoints = _unit getVariable [QGVAR(susPoints), 0];
 		_unit setVariable [QGVAR(susPoints), _susPoints + (3*GVAR(susPointsCoefficient))];
+		[QGVAR(susPointsAdded), [3*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 	}
 ] call CBA_fnc_addClassEventHandler;
 
@@ -45,10 +46,10 @@ ace_player addEventHandler ["GetOutMan", {
 	"ACE_Medical_Treatment_medicationLocal",
 	{
 		params ["_pt", "_bodypart", "_classname"];
-		if (side ace_player != civilian) exitWith {};
 		if ((ace_player != _pt) && {side _pt != side ace_player}) exitWith {
 			private _susPoints = ace_player getVariable [QGVAR(susPoints), 0];
-			ace_player setVariable [QGVAR(susPoints), _susPoints + (1*GVAR(susPointsCoefficient))];
+			ace_player setVariable [QGVAR(susPoints), _susPoints + (5*GVAR(susPointsCoefficient))];
+			[QGVAR(susPointsAdded), [1*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 		};
 	}
 ] call CBA_fnc_addEventHandler;
@@ -59,7 +60,8 @@ ace_player addEventHandler ["GetOutMan", {
 		params ["_explosive","_dir","_pitch","_unit"];
 		if (_unit != ace_player) exitWith {};
 		private _susPoints = ace_player getVariable [QGVAR(susPoints), 0];
-		ace_player setVariable [QGVAR(susPoints), _susPoints + (5*GVAR(susPointsCoefficient))];
+		ace_player setVariable [QGVAR(susPoints), _susPoints + (10*GVAR(susPointsCoefficient))];
+		[QGVAR(susPointsAdded), [5*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 	}
 ] call CBA_fnc_addEventHandler;
 
@@ -71,5 +73,6 @@ addMissionEventHandler ["EntityKilled", {
 	if (_killer == ace_player) exitWith {
 		private _susPoints = ace_player getVariable [QGVAR(susPoints), 0];
 		ace_player setVariable [QGVAR(susPoints), _susPoints + (3*GVAR(susPointsCoefficient))];
+		[QGVAR(susPointsAdded), [3*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
 	};
 }];

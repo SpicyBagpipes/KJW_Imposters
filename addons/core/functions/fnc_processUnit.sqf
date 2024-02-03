@@ -67,6 +67,7 @@ _equipmentSum = (_equipmentSum + _susPoints + _vicScore)*GVAR(coefficient);
 [_unit, _equipmentSum] call FUNC(updateUnit);
 
 _unit setVariable [QGVAR(susPoints), _susPoints - GVAR(susPointsDecayQuantity) max 0];
+[QGVAR(susPointsDecayed), [GVAR(susPointsDecayQuantity)]] call CBA_fnc_localEvent;
 
 if (_unit isEqualTo ace_player) then {
     "KJW_Imposters_SusLayer" cutRsc ["KJW_Imposters_SusBar", "PLAIN"];
@@ -90,3 +91,5 @@ if (_unit isEqualTo ace_player) then {
         _sustext ctrlCommit 0;
     };
 };
+
+[QGVAR(processedUnit), [_unit, _equipmentSum]] call CBA_fnc_localEvent;

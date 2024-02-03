@@ -215,7 +215,7 @@
 	"SLIDER",
 	["Vehicle Coefficient", "Points coefficient for vehicle. Lower means more covert for vehicles"],
 	["KJW's Imposters", "Equipment Coefficients"],
-	[0, 10, 5, 1], // Default value
+	[0, 20, 10, 1], // Default value
 	1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0)
 	{}, // Setting changed code
 	false // Requires restart
