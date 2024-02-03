@@ -48,6 +48,6 @@
 
 #define PREP(FUNCTIONNAME) COMPONENT_GENERAL##_fnc_##FUNCTIONNAME = compile preProcessFileLineNumbers '\y\##MOD_NAME##\addons\##COMPONENT##\functions\fnc_##FUNCTIONNAME##.sqf';
 
-#define COMPAT(CLASSNAME,SCORE)class CLASSNAME {\
+#define COMPAT(CLASSNAME,BASECLASS,SCORE)class CLASSNAME: BASECLASS {\
 				KJW_Imposters_SuspicionAmount = SCORE##;\
 			};
