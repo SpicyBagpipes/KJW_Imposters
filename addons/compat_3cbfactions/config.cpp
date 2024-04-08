@@ -139,6 +139,7 @@ class CfgWeapons {
     class H_RacingHelmet_1_white_F;
     class rhs_Booniehat_flora;
 
+    COMPAT(UK3CB_MEC_C_Jeans_Tshirt_U_01,Uniform_Base,0)
     COMPAT(UK3CB_CHC_C_U_HIKER_01,Uniform_Base,0)
     COMPAT(UK3CB_CHC_C_U_CIT_01,Uniform_Base,0)
     COMPAT(UK3CB_CHC_C_U_ACTIVIST_01,Uniform_Base,0)
