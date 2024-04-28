@@ -30,3 +30,4 @@ class Extended_PreInit_EventHandlers {
 };
 
 #include "RscTitles.hpp"
+#include "ACE_Arsenal_stats.hpp"
