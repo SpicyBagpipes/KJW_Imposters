@@ -66,6 +66,10 @@ private _susPoints = _unit getVariable [QGVAR(susPoints), 0];
 
 _equipmentSum = (_equipmentSum + _susPoints + _vicScore)*GVAR(coefficient);
 
+if (GVAR(allowVehicleDisguise) && ((GVAR(itemScores) getOrDefault [typeOf vehicle player, 1]) <= 0)) then {
+    _equipmentSum = _susPoints;
+};
+
 [_unit, _equipmentSum] call FUNC(updateUnit);
 
 _unit setVariable [QGVAR(susPoints), _susPoints - GVAR(susPointsDecayQuantity) max 0];

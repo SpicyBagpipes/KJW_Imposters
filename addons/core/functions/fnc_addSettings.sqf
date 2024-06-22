@@ -56,6 +56,17 @@
 ] call CBA_fnc_addSetting;
 
 [
+	QGVAR(allowVehicleDisguise),
+	"CHECKBOX",
+	["Allow Vehicle Disguise", "Will disguise units entirely (excluding sus points) if they are in a civilian vehicle"],
+	"KJW's Imposters",
+	true, // Default value
+	1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0)
+	{}, // Setting changed code
+	false // Requires restart
+] call CBA_fnc_addSetting;
+
+[
 	QGVAR(coefficient),
 	"SLIDER",
 	["Overt Coefficient", "Coefficient applied to how overt the unit should be. Higher values mean more overt"],
