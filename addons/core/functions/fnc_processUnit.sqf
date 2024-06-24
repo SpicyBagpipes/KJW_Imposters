@@ -66,7 +66,7 @@ private _susPoints = _unit getVariable [QGVAR(susPoints), 0];
 
 _equipmentSum = (_equipmentSum + _susPoints + _vicScore)*GVAR(coefficient);
 
-if (GVAR(allowVehicleDisguise) && ((GVAR(itemScores) getOrDefault [typeOf vehicle player, 1]) <= 0)) then {
+if (GVAR(allowVehicleDisguise) && ((GVAR(itemScores) getOrDefault [typeOf vehicle _unit, 1]) <= 0) && !([_unit] call CBA_fnc_canUseWeapon)) then {
     _equipmentSum = _susPoints;
 };
 
