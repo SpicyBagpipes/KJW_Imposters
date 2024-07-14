@@ -28,7 +28,7 @@ if (lifeState _unit == "INCAPACITATED") exitWith {
 _unit setUnitTrait ["audibleCoef", _score min 1];
 _unit setUnitTrait ["camouflageCoef", _score min 1];
 
-if (_score < GVAR(captiveThreshold) && currentWeapon _unit == "") then {
+if ((_score < GVAR(captiveThreshold) && currentWeapon _unit == "") || (_unit getVariable ["ace_captives_isSurrendering",false] || _unit getVariable ["ace_captives_isHandcuffed",false])) then {
     _unit setCaptive true;
 } else {
     _unit setCaptive false;
