@@ -43,6 +43,18 @@ player addEventHandler ["GetOutMan", {
 ] call CBA_fnc_addClassEventHandler;
 
 [
+	"AllVehicles",
+	"fired",
+	{
+		params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+		
+		private _susPoints = _gunner getVariable [QGVAR(susPoints), 0];
+		_gunner setVariable [QGVAR(susPoints), _susPoints + (4*GVAR(susPointsCoefficient))];
+		[QGVAR(susPointsAdded), [4*GVAR(susPointsCoefficient)]] call CBA_fnc_localEvent;
+	}
+] call CBA_fnc_addClassEventHandler;
+
+[
 	"ACE_Medical_Treatment_medicationLocal",
 	{
 		params ["_pt", "_bodypart", "_classname"];
