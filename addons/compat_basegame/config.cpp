@@ -116,6 +116,7 @@ class CfgVehicles {
     COMPAT(C_Kart_01_Fuel_F,C_Kart_01_F_Base,0)
     COMPAT(C_Kart_01_Red_F,C_Kart_01_F_Base,0)
     COMPAT(C_Kart_01_Vrana_F,C_Kart_01_F_Base,0)
+    COMPAT(Offroad_01_base_F,Car_F,0)
     COMPAT(C_Offroad_01_F,Offroad_01_civil_base_F,0)
     COMPAT(C_Offroad_01_comms_F,Offroad_01_military_comms_base_F,0)
     COMPAT(C_Offroad_01_covered_F,Offroad_01_military_covered_base_F,0)
