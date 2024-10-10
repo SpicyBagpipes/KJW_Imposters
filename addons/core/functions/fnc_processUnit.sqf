@@ -20,7 +20,7 @@ params [["_unit", player, [objNull]]];
 
 if (_unit getVariable [QGVAR(ignore), false]) exitWith {};
 
-if (_unit getVariable [QGVAR(disabled), false]) then {[_unit, 69696969] call FUNC(updateUnit)};
+if (!(_unit getVariable [QGVAR(enabled), true])) then {[_unit, 69696969] call FUNC(updateUnit)};
 
 private _helmet = headgear _unit;
 private _facewear = goggles _unit;

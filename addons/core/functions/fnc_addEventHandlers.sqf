@@ -20,7 +20,7 @@
 	"ace_medical_handleUnitVitals",
 	{
 		params ["_unit", "_deltaT"];
-		if GVAR(Enabled) then {
+		if GVAR(enabled) then {
 			[_unit] call FUNC(processUnit);
 		};
 	}

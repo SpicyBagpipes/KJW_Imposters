@@ -25,9 +25,7 @@
 	1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0)
 	{
 		{
-			_x setCaptive false;
-			_x setUnitTrait ["audibleCoef", 1];
-			_x setUnitTrait ["camouflageCoef", 1];
+			[_x] call FUNC(processUnit);
 		} forEach allUnits;
 	}, // Setting changed code
 	false // Requires restart
