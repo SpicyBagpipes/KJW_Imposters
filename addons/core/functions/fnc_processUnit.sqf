@@ -18,7 +18,7 @@
 
 params [["_unit", player, [objNull]]];
 
-if (_unit getVariable [QGVAR(ignore), false]) exitWith {};
+if (_unit getVariable [QGVAR(ignore), false] || getText ((configOf _unit) >> "simulation") == "UAVPilot") exitWith {};
 
 if (!(_unit getVariable [QGVAR(enabled), true])) then {[_unit, 69696969] call FUNC(updateUnit)};
 
